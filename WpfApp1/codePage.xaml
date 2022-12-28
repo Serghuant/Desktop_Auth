@@ -1,0 +1,12 @@
+﻿<Window x:Class="WpfApp1.codePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="codePage" Height="200" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <TextBox HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="copyCode" TextChanged="copyCode_TextChanged">m5As@8%d</TextBox>
+    </Grid>
+</Window>

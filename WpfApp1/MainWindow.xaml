@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp1.MainWindow" Icon="/image.jpg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="390" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25">Телеком Нева Связь</TextBlock>
+        <Image Grid.Column="2" Source="/Лого ТНС.jpg"></Image>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">Номер</TextBlock>
+            <TextBox Grid.Row="0" Width="190" Height="25" HorizontalAlignment="Right" x:Name="inputNumber" KeyDown="inputNumber_KeyDown"></TextBox>
+
+            <TextBlock Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">Пароль</TextBlock>
+            <PasswordBox Grid.Row="1" Width="190" Height="25" HorizontalAlignment="Right" x:Name="inputPassword" IsEnabled="False" KeyDown="inputPassword_KeyDown"></PasswordBox>
+
+            <TextBlock Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">Код</TextBlock>
+            <TextBox Grid.Row="2" Width="150" Height="25" HorizontalAlignment="Left" Margin="77,3,0,4" x:Name="inputCode" IsEnabled="False" KeyDown="inputCode_KeyDown"></TextBox>
+            <Button Grid.Row="2" Width="40" Height="25" HorizontalAlignment="Left" x:Name="codeButton" IsEnabled="False" Margin="227,3,0,4" Click="codeButton_Click">
+                <Image Source="/На авторизацию_Обновление кода.jpg"></Image>
+            </Button>
+
+        </Grid>
+        <Button Width="100" Height="25" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="cancelButton" Click="cancelButton_Click">Отмена</Button>
+        <Button Width="100" Height="25" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="enterButton" IsEnabled="False" Click="enterButton_Click">Вход</Button>
+    </Grid>
+</Window>
